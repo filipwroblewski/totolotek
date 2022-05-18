@@ -1,7 +1,7 @@
 import random
 
 
-def set_up():
+def ustawienia():
     try:
         ile_liczb = int(input('Podaj ilosc typowanych liczb (0;100): '))
         maks_liczba = int(input('Podaj maksymalna losowana liczbe (0;1000): '))
@@ -55,11 +55,3 @@ def podsumowanie(liczby, typy):
         print('Brak trafien')
     # print(f'Wpisane liczby: {typy}')
     # print(f'Wylosowane liczby: {liczby}')
-
-
-a, b = set_up()
-losowanie(a, b)
-
-arr = losowanie(a, b)
-
-podsumowanie(arr, strzaly(a, b))
