@@ -17,7 +17,7 @@ def set_up():
         exit()
 
 
-def losowanie():
+def losowanie(ile_liczb, maks_liczba):
     liczby = []
     i = 0
     while i < ile_liczb:
@@ -29,7 +29,7 @@ def losowanie():
     return liczby
 
 
-def strzaly():
+def strzaly(ile_liczb, maks_liczba):
     typy = set()
     i = 0
     while i < ile_liczb:
@@ -46,7 +46,7 @@ def strzaly():
     return typy
 
 
-def podsumowanie(typy):
+def podsumowanie(liczby, typy):
     trafione = typy & set(liczby)  # & - czesc wspolna zbiorow
     if trafione:
         print(f'Ilosc trafien: {len(trafione)}')
@@ -57,9 +57,9 @@ def podsumowanie(typy):
     # print(f'Wylosowane liczby: {liczby}')
 
 
-ile_liczb, maks_liczba = set_up()
-losowanie()
+a, b = set_up()
+losowanie(a, b)
 
-liczby = losowanie()
+arr = losowanie(a, b)
 
-podsumowanie(strzaly())
+podsumowanie(arr, strzaly(a, b))
